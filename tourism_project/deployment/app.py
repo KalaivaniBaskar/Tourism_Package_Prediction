@@ -20,7 +20,7 @@ with st.form("customer_input_form"):
     with col1:
         age = st.number_input("Age", min_value=18, max_value=100, value=30)
         type_of_contact = st.selectbox("Type of Contact", ["Self Enquiry", "Company Invited"])
-        city_tier = st.selectbox("City Tier", [1, 2, 3])
+        city_tier = st.selectbox("City Tier", ["tier1", "tier2", "tier3"])
         occupation = st.selectbox("Occupation", ["Salaried", "Small Business", "Large Business", "Free Lancer"])
         gender = st.selectbox("Gender", ["Male", "Female"])
         no_of_person_visiting = st.number_input("Number of Persons Visiting", min_value=1, max_value=10, value=2)
@@ -29,8 +29,8 @@ with st.form("customer_input_form"):
 
     with col2:
         no_of_trips = st.number_input("Number of Trips", min_value=1, max_value=400, value=2)
-        passport = st.selectbox("Passport", ["Yes", "No"])
-        own_car = st.selectbox("Own Car", ["Yes", "No"])
+        passport = st.selectbox("Has Passport?", ["yes", "no"])
+        own_car = st.selectbox("Owns a Car?", ["yes", "no"])
         no_of_children_visiting = st.number_input("Number of Children Visiting (< age 5)", min_value=0, max_value=5, value=0)
         designation = st.selectbox("Designation", ["Executive", "Manager", "Senior Manager", "AVP", "VP"])
         monthly_income = st.number_input("Monthly Income", min_value=0.0, value=20000.0)
