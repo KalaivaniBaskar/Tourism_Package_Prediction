@@ -24,7 +24,7 @@ with st.form("customer_input_form"):
         occupation = st.selectbox("Occupation", ["Salaried", "Small Business", "Large Business", "Free Lancer"])
         gender = st.selectbox("Gender", ["Male", "Female"])
         no_of_person_visiting = st.number_input("Number of Persons Visiting", min_value=1, max_value=10, value=2)
-        preferred_property_star = st.selectbox("Preferred Property Star", [1, 2, 3, 4, 5], index=0)
+        preferred_property_star = st.selectbox("Preferred Property Star", [1, 2, 3, 4, 5], index=2)
         marital_status = st.selectbox("Marital Status", ["Married", "Single", "Divorced"])
 
     with col2:
