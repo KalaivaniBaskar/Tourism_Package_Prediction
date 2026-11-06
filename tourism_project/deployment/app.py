@@ -78,6 +78,7 @@ if submit_button:
     classification_threshold = 0.45
 
     # Predict button evaluation
+    st.write("DEBUG - Processed input sent to model:", input_data)
     prediction_proba = model.predict_proba(input_data)[0, 1]
     prediction = (prediction_proba >= classification_threshold).astype(int)
     
