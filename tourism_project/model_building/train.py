@@ -59,7 +59,7 @@ xgb_model = xgb.XGBClassifier(scale_pos_weight=class_weight, random_state=42)
 # Note: use a Small grid if you want the pipeline to run fast on GitHub Actions.
 # Define hyperparameter grid
 param_grid = {
-    "xgbclassifier__n_estimators": [50, 75, 100],
+    "xgbclassifier__n_estimators": [100, 150],
     "xgbclassifier__max_depth": [2, 3, 5],
     "xgbclassifier__colsample_bytree": [ 0.6, 0.8],
     "xgbclassifier__colsample_bylevel": [ 0.6, 0.8],
