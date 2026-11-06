@@ -36,9 +36,15 @@ numeric_features = [
 
 # List of categorical features in the dataset
 categorical_features = [
-    'TypeofContact', 'Occupation', 'Gender', 'ProductPitched', 
-    'MaritalStatus', 'Designation', 'CityTier', 'OwnCar', 'Passport'
-]
+      'TypeofContact',
+      'Occupation',
+      'Gender',
+      'ProductPitched',
+      'MaritalStatus',
+      'Designation', 
+      'CityTier', 
+      'OwnCar', 
+      'Passport']
 
 # Define predictor matrix (X) using selected numeric and categorical features
 X = df[numeric_features + categorical_features]
