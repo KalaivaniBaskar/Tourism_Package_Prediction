@@ -31,7 +31,7 @@ with st.form("customer_input_form"):
         no_of_trips = st.number_input("Number of Trips", min_value=1, max_value=400, value=2)
         passport = st.selectbox("Has Passport?", ["yes", "no"])
         own_car = st.selectbox("Owns a Car?", ["yes", "no"])
-        no_of_children_visiting = st.number_input("Number of Children Visiting (< age 5)", min_value=0, max_value=5, value=0)
+        no_of_children_visiting = st.number_input("Number of Children Visiting (< age 5)", min_value=0, max_value=15, value=0)
         designation = st.selectbox("Designation", ["Executive", "Manager", "Senior Manager", "AVP", "VP"])
         monthly_income = st.number_input("Monthly Income", min_value=0.0, value=20000.0)
 
@@ -63,8 +63,8 @@ if submit_button:
         "PreferredPropertyStar": preferred_property_star,
         "MaritalStatus": marital_status,
         "NumberOfTrips": no_of_trips,
-        "Passport": 1 if passport == "Yes" else 0,
-        "OwnCar": 1 if own_car == "Yes" else 0,
+        "Passport": passport,
+        "OwnCar": own_car,
         "NumberOfChildrenVisiting": no_of_children_visiting,
         "Designation": designation,
         "MonthlyIncome": monthly_income,
