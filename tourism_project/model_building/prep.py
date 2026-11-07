@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("tourism_project/data/tourism.csv")
 print("Dataset loaded successfully.")
 
-# Data cleaning 
+# Data cleaning
 # Replace 'Fe Male' with 'Female' in the Gender column
 df['Gender'] = df['Gender'].replace('Fe Male', 'Female')
 
@@ -19,7 +19,7 @@ df['OwnCar'] = df['OwnCar'].map({1: 'yes', 0: 'no'})
 df['Passport'] = df['Passport'].map({1: 'yes', 0: 'no'})
 
 # Define the target variable for the classification task
-target = "ProdTaken" 
+target = "ProdTaken"
 # Target variable indicating whether the customer has purchased a package (0: No, 1: Yes).
 
 # List of numerical features in the dataset
@@ -41,9 +41,9 @@ categorical_features = [
       'Gender',
       'ProductPitched',
       'MaritalStatus',
-      'Designation', 
-      'CityTier', 
-      'OwnCar', 
+      'Designation',
+      'CityTier',
+      'OwnCar',
       'Passport']
 
 # Define predictor matrix (X) using selected numeric and categorical features
