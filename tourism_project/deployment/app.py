@@ -14,9 +14,9 @@ st.write("Kindly enter the customer details to check whether they are likely to 
 
 with st.form("customer_input_form"):
     st.subheader("Customer Details")
-    
+
     col1, col2 = st.columns(2)
-    
+
     with col1:
         age = st.number_input("Age", min_value=18, max_value=100, value=30)
         type_of_contact = st.selectbox("Type of Contact", ["Self Enquiry", "Company Invited"])
@@ -36,9 +36,9 @@ with st.form("customer_input_form"):
         monthly_income = st.number_input("Monthly Income", min_value=0.0, value=20000.0)
 
     st.subheader("Customer Interaction Data")
-    
+
     col3, col4 = st.columns(2)
-    
+
     with col3:
         pitch_satisfaction_score = st.selectbox("Pitch Satisfaction Score", [1, 2, 3, 4, 5], index=2)
         product_pitched = st.selectbox("Product Pitched", ["Basic", "Deluxe", "Standard", "Super Deluxe", "King"])
@@ -81,6 +81,6 @@ if submit_button:
     st.write("DEBUG - Processed input sent to model:", input_data)
     prediction_proba = model.predict_proba(input_data)[0, 1]
     prediction = (prediction_proba >= classification_threshold).astype(int)
-    
+
     result = "likely" if prediction == 1 else "unlikely"
     st.write(f"Based on the information provided, the customer is **{result} to purchase** the tourism package (Probability: {prediction_proba:.2%}).")
