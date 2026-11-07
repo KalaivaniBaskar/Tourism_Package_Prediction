@@ -34,13 +34,16 @@ numeric_features = [
       'MonthlyIncome']
 
 # List of categorical features in the dataset
-categorical_features = ['TypeofContact',
+categorical_features = [
+      'TypeofContact',
       'Occupation',
       'Gender',
       'ProductPitched',
       'MaritalStatus',
-      'Designation', 
-      'CityTier', 'OwnCar', 'Passport']
+      'Designation',
+      'CityTier',
+      'OwnCar',
+      'Passport']
 
 
 # Set the class weight to handle class imbalance
